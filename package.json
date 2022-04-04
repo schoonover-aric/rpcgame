@@ -1,0 +1,19 @@
+{
+  "name": "rpcgame",
+  "version": "1.0.0",
+  "description": "Rock, Paper, Scissors game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoonover-aric/rpcgame.git"
+  },
+  "author": "Aric Schonover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoonover-aric/rpcgame/issues"
+  },
+  "homepage": "https://github.com/schoonover-aric/rpcgame#readme"
+}
