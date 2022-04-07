@@ -43,9 +43,16 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     let playerSelectionYoo = prompt("Rock, Paper or Scissors?");
-    computerSelectionYoo = computerPlay();
+    let computerSelectionYoo = computerPlay();
     let returnedValue = playRound(playerSelectionYoo, computerSelectionYoo);
-    console.log("Round " + i + " Results: ");
+    console.log("Round " + (i + 1) + " Results: ");
+    console.log("returnedValue: " + returnedValue);
+    // if (cpuScore === 3) {
+    //   return "CPU Wins! Sorry, partner";
+    // }
+    // if (playerScore === 3) {
+    //   return "Player 1 Wins! Noice!!";
+    // }
     if (
       returnedValue === "Paper beats Rock, CPU wins!" ||
       returnedValue === "Scissors beats Paper, CPU wins!" ||
@@ -60,18 +67,27 @@ function game() {
     ) {
       playerScore++;
     }
+    if (returnedValue === "You've Tied!") {
+      cpuScore++;
+      playerScore++;
+    }
     console.log("cpuScore: " + cpuScore);
     console.log("playerScore: " + playerScore);
+  }
+  if (cpuScore === playerScore) {
+    return "Wow, it's a super rare TIE!!";
   }
   if (cpuScore > playerScore) {
     return "CPU Wins! " + cpuScore + " - " + playerScore;
   } else {
     return "Player 1 Wins! " + playerScore + " - " + cpuScore;
   }
+  cpuScore = 0;
+  playerScore = 0;
 }
 
-const playerSelection = "RoCk";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+// const playerSelection = "RoCk";
+// const computerSelection = computerPlay();
+// console.log(playRound(playerSelection, computerSelection));
 
-console.log(game());
+//console.log(game());
