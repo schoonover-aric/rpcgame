@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Rock Paper Scissors</title>
-    <script src="/app.js"></script>
+    <script src="/app.js" defer></script>
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <h2>rpcArray[2]: <span id="testh2"></span></h2>
-    <script>
-      document.getElementById("testh2").innerHTML = rpcArray[2];
-    </script>
-    <button id="myBtn" onclick="console.log(game())">Play R-P-S!</button>
+    <!-- <h1>Rock, Paper, Scissors</h1> -->
+    <!-- <h4>rpcArray[2]: <span id="testh2"></span></h4> -->
+    <h4>Click to play a round, First to 5 wins!</h4>
+    <button id="btnRock">Rock</button>
+    <button id="btnPaper">Paper</button>
+    <button id="btnScissors">Scissors</button>
+    <div id="results">
+      <h2 id="score"></h2>
+      <h2 id="message"></h2>
+      <h4 id="cpuResults"></h4>
+      <h4 id="playerResults"></h4>
+    </div>
   </body>
 </html>
